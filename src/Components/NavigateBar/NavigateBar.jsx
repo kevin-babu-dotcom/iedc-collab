@@ -220,7 +220,7 @@ const Navbar = () => {
               id="navbarSupportedContent"
               style={{ flexGrow: "0", display: "flex" }}
             >
-              <div
+              {profile.approved? <div
                 className="NavigateBar-Newprobtn-1 css-button"
                 onClick={
                   profile?.role === "Organization" ? postJobClick : newprojectClick
@@ -230,7 +230,7 @@ const Navbar = () => {
                   <i className="fa fa-plus-square"></i>
                 </div>
                 <div className="css-button-text">{profile?.role === "Organization" ? 'Post Job': 'New Project'}</div>
-              </div>
+              </div>:<></>}
 
               {currentUser ? (
                 <Menu
